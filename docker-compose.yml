@@ -11,7 +11,8 @@ services:
         volumes:
             - ./DevelopersTeamEx/:/var/www/html
         command: >
-            bash -c "cd /var/www/html/ && composer upgrade && composer update && composer install && /usr/sbin/apachectl -D FOREGROUND"
+            bash -c "cd /var/www/html/
+            && composer upgrade && composer update && composer install && /usr/sbin/apachectl -D FOREGROUND"
         networks:
             - sprint03_network
 

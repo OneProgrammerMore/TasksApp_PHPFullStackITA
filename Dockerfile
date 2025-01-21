@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:bookworm-20250113-slim
 
 RUN apt update
 RUN apt -y install nano lsof
@@ -21,6 +21,6 @@ EXPOSE 80
 CMD chmod -R a+wr /var/www/html/data/
 CMD cd /var/www/html && composer update && composer install
 
-
+WORKDIR /var/www/html
 
 
