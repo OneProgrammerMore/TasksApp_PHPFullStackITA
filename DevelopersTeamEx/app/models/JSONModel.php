@@ -45,7 +45,7 @@ class JSONModel extends Model
 	//Use to fetch all the occurrences of the database table
 	public function fetchAll()
 	{
-		debug_to_console($this->pathJSONFile);
+		
 		$json_data = file_get_contents($this->pathJSONFile);
 		$arrayJSONFile = json_decode($json_data, TRUE);
 

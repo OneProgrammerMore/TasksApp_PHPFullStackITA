@@ -140,7 +140,7 @@ class IndexController extends ApplicationController
 								$taskData['finalization_date'] = $taskData['creation_date'];
 							}
 						} catch (Exception $e) {
-							debug_to_console("exception = ", $e);
+							
 						}
 
 						$appModel->save($taskData);
@@ -156,7 +156,7 @@ class IndexController extends ApplicationController
 								$taskData['finalization_date'] = $taskData['creation_date'];
 							}
 						} catch (Exception $e) {
-							debug_to_console("exception = ", $e);
+							
 						}
 
 						$appModel->save($taskData);

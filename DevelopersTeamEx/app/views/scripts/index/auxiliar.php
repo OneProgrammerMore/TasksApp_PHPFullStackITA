@@ -27,7 +27,6 @@ function addListTaskIntoHTML($obj)
 
 			//Variables to print:
 			$taskId = '$task[' . $counter .  "][\'task_id\']";
-			debug_to_console($taskId);
 			$array = 'task';
 
 			//ToDo Associative array and reduce to a loop each row but the two at the end.

@@ -37,13 +37,6 @@ function modPopUpFunction() {
 	document.getElementById("modFinalizationDate").value = taskFinalizationDate;
 
 	document.getElementById("modFormDiv").style.display = "block";
-
-	console.log(
-		JSON.stringify({
-			task_id: taskId,
-			submit: delTask,
-		})
-	);
 }
 
 function closeFormPopUpFunction() {
@@ -55,7 +48,6 @@ function delTaskFunction() {
 		event.currentTarget.parentElement.parentElement.getElementsByClassName(
 			"taskId"
 		)[0].innerText;
-	console.log("I AM in delTaskFunction with ID" + taskId);
 	document.getElementById("delTaskId").value = taskId;
 
 	let form = document.getElementById("delForm");

@@ -4,8 +4,6 @@ function get_stylesheet(string $stylesheetName){
 	$stylesPath = "/stylesheets/";
 	
 	if(file_exists(ROOT_PATH ."/web". $stylesPath . $stylesheetName)){
-		//return ROOT_PATH . $stylesPath . $stylesheetName;
-		//return $stylesPath . $stylesheetName;
 		return WEB_ROOT . $stylesPath . $stylesheetName;
 	}else{
 		return "";
@@ -16,8 +14,6 @@ function get_javascript(string $scriptName){
 	$javascriptsPath = "/javascripts/";
 	
 	if(file_exists(ROOT_PATH  ."/web". $javascriptsPath . $scriptName)){
-		//return ROOT_PATH . $stylesPath . $stylesheetName;
-		//return $stylesPath . $stylesheetName;
 		return WEB_ROOT . $javascriptsPath . $scriptName;
 	}else{
 		return "";
@@ -28,8 +24,6 @@ function get_png(string $pngName){
 	$imagesPath = "/images/";
 	
 	if(file_exists(ROOT_PATH  ."/web". $imagesPath . $pngName)){
-		//return ROOT_PATH . $stylesPath . $stylesheetName;
-		//return $stylesPath . $stylesheetName;
 		return WEB_ROOT . $imagesPath . $pngName;
 	}else{
 		return "";
@@ -40,8 +34,6 @@ function get_png_ds(string $pngName){
 	$imagesPath = "/images/";
 	
 	if(file_exists(ROOT_PATH  ."/web". $imagesPath . $pngName)){
-		//return ROOT_PATH . $stylesPath . $stylesheetName;
-		//return $stylesPath . $stylesheetName;
 		$outputOriginal = WEB_ROOT . $imagesPath . $pngName;
 		$outputStr = str_replace('/', '\/', $outputOriginal);
 		return $outputStr;
@@ -84,20 +76,11 @@ function setNullIfNotExisting($data = array()){
 		$data['description'] = "Null";
 	}
 	if(!isset($data['creation_date'])  or  empty($data['creation_date'])){
-		//$data['creation_date'] = strtotime(date("Y-m-D H:i:S"));
 		$data['creation_date'] = date("Y-m-d H:i:s");
 	}
-	//$data['creation_date'] = date("Y-m-d H:i:s");
-	debug_to_console("Date...");
-	debug_to_console($data['creation_date']);
-	//$data['creation_date'] = strtotime(date("Y-m-D H:i"));
-	//$data['creation_date'] = time();
+	
 	if(!isset($data['finalization_date']) or empty($data['finalization_date'])){
-		//$data['finalization_date'] = NULL;
-		//$data['finalization_date'] = "NULL";
-		$data['finalization_date'] = Null;
-		//$data['finalization_date'] = date("Y-m-d H:i:s");
-		
+		$data['finalization_date'] = Null;		
 	}
 	
 	//ToDo 
