@@ -2,234 +2,225 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";*/
-
-html{
+html {
 	@apply font-sans bg-slate-300;
 }
 
-body{
-    @apply container mx-auto;
-
+body {
+	@apply container mx-auto;
 }
 
-header{
+header {
 	@apply flex w-full bg-slate-600 text-white text-xl rounded-none border-b-4 border-slate-400 border-solid items-center justify-between;
 }
 
-#addTaskButton, #addTaskButtonEmptyState{
+#addTaskButton,
+#addTaskButtonEmptyState {
 	@apply p-5 m-3;
 	@apply bg-slate-300 rounded-lg;
 }
 
-header > h2{
+header > h2 {
 	@apply m-7;
 }
-main{
+
+main {
 	@apply bg-slate-500;
 	@apply mx-14;
 }
 
-#tasksList{
-    /*@apply box-border;
-    @apply table w-full table-auto border-separate;
-    @apply place-content-center;*/
-    @apply table-auto border-separate w-full;
-    
-}
-/*
-#headerTasksList{
-    @apply container;
-    @apply table-header-group gap-4 grid-cols-6;
-    @apply table-row;
+#tasksList {
+	@apply table-auto border-separate w-full;
 }
 
-.rowTasksList{
-    @apply table-row-group;
-}
-*/
-.taskId, .taskCreator, .taskType, .taskDescription, .taskCreationDate, .taskFinalizationDate, .margin, .divMod, .divDel{
-
-    @apply content-center bg-gray-300  justify-items-center text-center;
-}
-
-.divMod >a, .divDel >a{
-    @apply place-content-center;
-}
-
-.iconMod{
-    background-image: url("/web/images/modify-i.png");
-}
-.iconDel{
-    background-image: url("/web/images/delete-i.png");
-}
-.iconDel, .iconMod{
-    @apply bg-no-repeat bg-contain;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
+.taskId,
+.taskCreator,
+.taskType,
+.taskDescription,
+.taskCreationDate,
+.taskFinalizationDate,
+.margin,
+.divMod,
+.divDel {
+	@apply content-center bg-gray-300 justify-items-center text-center;
 }
 
-.divMod > button, .divDel > button{
-    @apply block m-auto mt-2 mb-2;
+.divMod > a,
+.divDel > a {
+	@apply place-content-center;
+}
+
+.iconMod {
+	background-image: url("/web/images/modify-i.png");
+}
+
+.iconDel {
+	background-image: url("/web/images/delete-i.png");
+}
+
+.iconDel,
+.iconMod {
+	@apply bg-no-repeat bg-contain;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+}
+
+.divMod > button,
+.divDel > button {
+	@apply block m-auto mt-2 mb-2;
 }
 
 /* STYLE FOR THE MODIFICATION FORMULAR START */
-#modTaskId{
+#modTaskId {
 	@apply bg-slate-300;
 }
 
-#modFormDiv{
+#modFormDiv {
 	@apply fixed snap-center size-full object-center;
 	@apply bg-slate-500 bg-opacity-70;
 	@apply left-0 right-0 top-0 bottom-0;
-	/*@apply collapse;*/
-	/*Because line above not working "collapse"*/
 	display: none;
-	
 }
-#innerModFormDiv{
+
+#innerModFormDiv {
 	@apply flex items-center justify-center size-full;
 	@apply bg-opacity-100;
-
 }
-#contentModFormDiv{
+
+#contentModFormDiv {
 	@apply flex flex-auto flex-col flex-wrap flex-wrap justify-center items-center content-center mx-auto;
 	@apply m-4 bg-slate-300 rounded-lg border-4 border-black border-solid;
 }
 
-#contentModFormDiv > form{
+#contentModFormDiv > form {
 	@apply mt-4 mb-4;
 }
-.groupForm{
+
+.groupForm {
 	@apply flex flex-wrap flex-row justify-between items-center;
 }
 
-.groupForm > *{
+.groupForm > * {
 	@apply mx-0.5 font-bold;
 	@apply text-sm;
 	@apply grow shrink;
-	
 }
-.groupForm > label{
+
+.groupForm > label {
 	@apply ml-2;
 }
 
-#modTaskDescription{
+#modTaskDescription {
 	@apply size-full;
 }
 
-#submitModForm{
+#submitModForm {
 	@apply size-full font-bold;
 }
 
-.groupForm > .inputGroup > button{
+.groupForm > .inputGroup > button {
 	@apply my-4 size-full font-bold;
 }
 
-/*border to inputs*/
-.inputGroup > input, .inputGroup > textarea, .inputGroup > button, .inputGroup > select, #filtersHideButton
-{
+.inputGroup > input,
+.inputGroup > textarea,
+.inputGroup > button,
+.inputGroup > select,
+#filtersHideButton {
 	@apply mb-1 border-2 border-black rounded p-2;
 }
-.inputGroup > label{
+
+.inputGroup > label {
 	@apply mb-2 mt-2;
 }
-#submitModForm{
+
+#submitModForm {
 	@apply bg-lime-300;
 }
-#modFormCloseButton{
+
+#modFormCloseButton {
 	@apply bg-red-300;
 }
 
 /* STYLE FOR THE MODIFICATION FORMULAR END */
-
-
-.formFieldHidden{
+.formFieldHidden {
 	display: none;
 }
 
-
 /* STYLE FOR THE ADDTION FORMULAR START */
-#addTaskId{
+#addTaskId {
 	@apply bg-slate-300;
 }
 
-#addFormDiv{
+#addFormDiv {
 	@apply fixed snap-center size-full object-center;
 	@apply bg-slate-500 bg-opacity-70;
 	@apply left-0 right-0 top-0 bottom-0;
-	/*@apply collapse;*/
-	/*Because line above not working "collapse"*/
 	display: none;
-	
 }
-#innerAddFormDiv{
+
+#innerAddFormDiv {
 	@apply flex items-center justify-center size-full;
 	@apply bg-opacity-100;
-
 }
-#contentAddFormDiv{
-	@apply flex flex-auto flex-col  flex-wrap justify-center items-center content-center mx-auto;
+
+#contentAddFormDiv {
+	@apply flex flex-auto flex-col flex-wrap justify-center items-center content-center mx-auto;
 	@apply m-4 bg-slate-300 rounded-lg border-4 border-black border-solid;
 }
 
-#contentAddFormDiv > form{
+#contentAddFormDiv > form {
 	@apply mt-4 mb-4;
 }
 
-#addTaskDescription{
+#addTaskDescription {
 	@apply size-full;
 }
 
-#submitAddForm{
+#submitAddForm {
 	@apply size-full font-bold;
 }
 
-#submitAddForm{
+#submitAddForm {
 	@apply bg-lime-300;
 }
-#addFormCloseButton{
+
+#addFormCloseButton {
 	@apply bg-red-300;
 }
+
 /* STYLE FOR THE ADDTION FORMULAR END */
 
-
 /* STYLE FOR THE DELETION FORMULAR START */
-#delFormDiv{
+#delFormDiv {
 	display: none;
 }
+
 /* STYLE FOR THE DELETION FORMULAR END */
 
-footer{
+footer {
 	@apply h-14;
-	/*heigth: 100px;*/
 }
 
-
 /* STYLE FOR THE EMPTY STATE START -------------- */
-
-#tasksEmptyState{
+#tasksEmptyState {
 	@apply flex flex-auto flex-col justify-center items-center content-center mx-auto;
 }
 
-#tasksEmptyState > text{
+#tasksEmptyState > text {
 	@apply justify-center items-center content-center m-10 text-center;
 }
 
 /* Search bar for tasks */
-
-.taskSearcher{
+.taskSearcher {
 	@apply bg-slate-300 rounded-lg;
 	@apply flex flex-row flex-wrap content-center items-center justify-center ml-auto;
 	@apply border-2 border-black rounded;
 	@apply mr-4;
 }
-#taskSearcherForm{
-	
+
+#taskSearcherForm {
 	@apply h-7;
 	@apply self-center;
 	@apply flex flex-col flex-wrap content-center items-center justify-center ml-auto;
@@ -239,47 +230,44 @@ footer{
 }
 
 /* FOR THE FILTERS */
-
-#filtersForm > h2{
+#filtersForm > h2 {
 	@apply size-full font-bold;
 }
 
-
-.filtersSel{
+.filtersSel {
 	background-image: url("/web/images/filters.png");
 	@apply bg-no-repeat bg-contain;
-    height: 15px;
-    width: 15px;
-    display: inline-block;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
 }
-#filtersButton{
+
+#filtersButton {
 	@apply p-5 m-3;
 	@apply bg-slate-300 rounded-lg;
 }
 
-#filtersFormDiv{
+#filtersFormDiv {
 	@apply fixed snap-center size-full object-center;
 	@apply bg-slate-500 bg-opacity-70;
 	@apply left-0 right-0 top-0 bottom-0;
-	/*@apply collapse;*/
-	/*Because line above not working "collapse"*/
 	display: none;
-	
 }
-#innerFiltersFormDiv{
+
+#innerFiltersFormDiv {
 	@apply flex items-center justify-center size-full;
 	@apply bg-opacity-100;
-
 }
-#contentFiltersFormDiv{
-	@apply flex flex-auto flex-col  flex-wrap justify-center items-center content-center mx-auto;
+
+#contentFiltersFormDiv {
+	@apply flex flex-auto flex-col flex-wrap justify-center items-center content-center mx-auto;
 	@apply m-4 bg-slate-300 rounded-lg border-4 border-black border-solid;
 }
 
-#contentFiltersFormDiv > form{
+#contentFiltersFormDiv > form {
 	@apply mt-4 mb-4;
 }
 
-.hiddenRow{
+.hiddenRow {
 	display: none;
 }

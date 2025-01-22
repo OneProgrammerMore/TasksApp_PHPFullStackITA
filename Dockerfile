@@ -16,11 +16,12 @@ RUN sed -i '/;extension=shmop/a extension=mongodb.so' /etc/php/8.2/apache2/php.i
 RUN rm /var/www/html/index.html
 COPY ./docker/config/apache2/000-default.conf /etc/apache2/sites-enabled/
 
-EXPOSE 80
+#Tailwind installation
+RUN mkdir -p /home/tailwind && cd /home/tailwind && curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64 && chmod a+x tailwindcss-linux-x64 && mv tailwindcss-linux-x64 tailwind
 
 CMD chmod -R a+wr /var/www/html/data/
 CMD cd /var/www/html && composer update && composer install
 
 WORKDIR /var/www/html
 
-
+EXPOSE 80
